@@ -10,12 +10,12 @@ import javax.servlet.annotation.*;
 
 @WebServlet(name = "NameParserServlet", value = "/parseName")
 public class NameParserServlet extends HttpServlet {
-    private Gson gson = new Gson();
-    private final String PARAMETER_NAME = "name";
+    private final Gson gson = new Gson();
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        String PARAMETER_NAME = "name";
         String name = request.getParameter(PARAMETER_NAME);
         if (name == null || name.isEmpty()) throw new ServletException("Empty or missing input!");
 

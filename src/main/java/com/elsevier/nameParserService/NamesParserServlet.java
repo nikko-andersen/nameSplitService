@@ -11,12 +11,12 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "NamesParserServlet", value = "/parseNames")
 public class NamesParserServlet extends HttpServlet {
-    private Gson gson = new Gson();
-    private final String PARAMETER_NAME = "names";
+    private final Gson gson = new Gson();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String PARAMETER_NAME = "names";
         String names = request.getParameter(PARAMETER_NAME);
         if (names == null || names.isEmpty()) throw new ServletException("Empty or missing input!");
 

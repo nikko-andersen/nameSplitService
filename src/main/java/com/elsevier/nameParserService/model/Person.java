@@ -5,8 +5,8 @@ import com.tupilabs.human_name_parser.HumanNameParserParser;
 import com.tupilabs.human_name_parser.Name;
 
 public class Person {
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
 
     public String getFirstName() {
         return firstName;
