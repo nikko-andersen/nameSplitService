@@ -1,9 +1,5 @@
 package com.elsevier.nameParserService.model;
 
-import com.tupilabs.human_name_parser.HumanNameParserBuilder;
-import com.tupilabs.human_name_parser.HumanNameParserParser;
-import com.tupilabs.human_name_parser.Name;
-
 public class Person {
     private final String firstName;
     private final String lastName;
@@ -16,16 +12,8 @@ public class Person {
         return lastName;
     }
 
-    public Person(String name) {
-        Name newName = new Name(name);
-        HumanNameParserBuilder builder = new HumanNameParserBuilder(newName);
-        HumanNameParserParser parser = builder.build();
-        if (!parser.getMiddle().isEmpty()) {
-            this.firstName = parser.getFirst() + " " + parser.getMiddle();
-        } else {
-            this.firstName = parser.getFirst();
-        }
-
-        this.lastName = parser.getLast();
+    public Person(String first, String last) {
+        this.firstName = first;
+        this.lastName = last;
     }
 }

@@ -1,0 +1,31 @@
+a {
+    background-color: cadetblue;
+    box-shadow: 0 5px 0 black;
+    color: black;
+    padding: 0.5em 1em;
+    position: relative;
+    text-decoration: none;
+    width: 450px;
+    display: block;
+}
+
+a:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+a:active {
+    box-shadow: none;
+    top: 5px;
+}
+p {
+    width: 450px;
+}
+
+.withBorder{
+    border-style: solid;
+    width: 500px;
+    border-spacing: 5px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
